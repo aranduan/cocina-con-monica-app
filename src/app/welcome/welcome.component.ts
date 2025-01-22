@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
-  imports: [],
+  standalone: true,
   templateUrl: './welcome.component.html',
-  styleUrl: './welcome.component.css'
+  styleUrls: ['./welcome.component.css']
 })
-export class WelcomeComponent {
 
-}
+export class WelcomeComponent {
+  title = '¡Bienvenido a Cocina con Mónica!';
+ showExtraMessage = true;
+ }

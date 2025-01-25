@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DailyRecipeComponent } from '../daily-recipe/daily-recipe.component';
+import { NewsFeedComponent } from '../news-feed/news-feed.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [DailyRecipeComponent],
+  imports: [DailyRecipeComponent, NewsFeedComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

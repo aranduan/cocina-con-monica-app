@@ -1,9 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'app-header',
+  standalone: true,
+  imports: [NgFor, CommonModule, RouterLink, RouterLinkActive],
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
+})
+export class HeaderComponent implements OnInit {
+  appName = 'Cocina con Mónica';
+  menuItems = [
+    { label: 'Bienvenida', route: '/welcome' },
+    { label: 'Login', route: '/login' },
+    { label: 'Home', route: '/home' },
+    { label: 'Listado de Recetas', route: '/recipe-list' },
+  ];
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+}
+```
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { NgFor, CommonModule } from '@angular/common';
 @Component({
   selector: 'app-news-feed',
   standalone: true,
-  imports: [],
+  imports: [NgFor, CommonModule],
   templateUrl: './news-feed.component.html',
   styleUrl: './news-feed.component.scss'
 })
@@ -31,3 +55,4 @@ export class NewsFeedComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+```

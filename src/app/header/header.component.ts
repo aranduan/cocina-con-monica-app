@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NgFor, CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
   appName = 'Cocina con Mónica';
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     { label: 'Bienvenida', route: '/welcome' },
     { label: 'Login', route: '/login' },
     { label: 'Home', route: '/home' },
-    { label: 'Recetas', route: '/recipe-list' },
+    { label: 'Listado de Recetas', route: '/recipe-list' },
   ];
 
   constructor() { }
@@ -21,3 +21,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+```

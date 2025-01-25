@@ -1,33 +1,7 @@
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [NgFor, CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
-})
-export class HeaderComponent implements OnInit {
-  appName = 'Cocina con Mónica';
-  menuItems = [
-    { label: 'Bienvenida', route: '/welcome' },
-    { label: 'Login', route: '/login' },
-    { label: 'Home', route: '/home' },
-    { label: 'Listado de Recetas', route: '/recipe-list' },
-  ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-}
-```
-
-```typescript
-import { Component, OnInit } from '@angular/core';
-import { NgFor, CommonModule } from '@angular/common';
-@Component({
   selector: 'app-news-feed',
   standalone: true,
-  imports: [NgFor, CommonModule],
+  imports: [CommonModule], // Corregido aquí
   templateUrl: './news-feed.component.html',
   styleUrl: './news-feed.component.scss'
 })
@@ -56,3 +30,30 @@ export class NewsFeedComponent implements OnInit {
   }
 }
 ```
+  ```typescript
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-footer',
+  standalone: true,
+  imports: [CommonModule], // Corregido aquí
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss'
+})
+export class FooterComponent implements OnInit {
+    footerItems = [
+      { icon: 'assets/img/home-icon.png', route: '/home', alt: "home icon"},
+      { icon: 'assets/img/heart-icon.png', route: '/favorites', alt: "heart icon" },
+      { icon: 'assets/img/chef-icon.png', route: '/recipes', alt: "chef icon" },
+      { icon: 'assets/img/community-icon.png', route: '/community', alt: "community icon" },
+      { icon: 'assets/img/profile-icon.png', route: '/profile', alt: "profile icon" },
+    ];
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+}
+```
+
+*   `CommonModule`: Este módulo proporciona las directivas comunes como `*ngFor`.

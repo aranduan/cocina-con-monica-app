@@ -1,27 +1,47 @@
 <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div *ngFor="let item of newsItems; let i = index" class="carousel-item" [class.active]="i === 0">
-        <div class="carousel-item-content" [style.background-image]="'url(' + item.image + ')'">
-          <div class="overlay"></div>
-            <div class="carousel-caption d-md-block text-start">
-                <h3 class="fw-bold text-white">{{item.title}}</h3>
-                <p class="text-white">{{ item.text }}</p>
-                <button class="btn btn-primary">Saber más</button>
-            </div>
-         </div>
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <div class="carousel-item-content" style="background-image: url('assets/img/christmas-turkey.png')">
+              <div class="overlay"></div>
+              <div class="carousel-caption d-md-block text-start">
+                  <h3 class="fw-bold text-white">¡El mejor para esta Navidad!</h3>
+                  <p class="text-white">Estas recetas, más tradicionales, son las que Monica pretende llevar a la mesa, aunque las cosas no salgan siempre como las ha planeado</p>
+                  <button class="btn btn-primary">Saber más</button>
+              </div>
+          </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+      <div class="carousel-item">
+          <div class="carousel-item-content" style="background-image: url('assets/img/valentines-recipe.png')">
+             <div class="overlay"></div>
+             <div class="carousel-caption d-md-block text-start">
+                <h3 class="fw-bold text-white">Nueva receta para San Valentín</h3>
+                  <p class="text-white">Nuestra nueva receta enamorará a cualquiera, descubre la receta y enamora con la cocina</p>
+                <button class="btn btn-primary">Saber más</button>
+              </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+         <div class="carousel-item-content" style="background-image: url('assets/img/halloween-recipe.png')">
+             <div class="overlay"></div>
+             <div class="carousel-caption d-md-block text-start">
+                <h3 class="fw-bold text-white">Recetas de Halloween</h3>
+                  <p class="text-white">¿Truco o trato? Con nuestras recetas de halloween no habrá quien se resista a probarlas</p>
+                  <button class="btn btn-primary">Saber más</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
 </div>

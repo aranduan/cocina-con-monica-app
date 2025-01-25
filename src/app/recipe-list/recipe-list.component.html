@@ -1,1 +1,13 @@
-<p>recipe-list works!</p>
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Lista de Recetas</h2>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let recipe of recipes">
+        <div class="card mb-3 recipe-card" (click)="onRecipeClicked(recipe)" style="cursor: pointer;">
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <p class="card-text">{{ recipe.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

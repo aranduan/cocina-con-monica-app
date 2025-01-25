@@ -1,0 +1,16 @@
+.recipe-card {
+    border: 1px solid #ddd; /* Añadimos un borde para separar las cartas*/
+    transition: transform 0.2s; /* Agregamos una transición al pasar el mouse */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* Añadimos una sombra para resaltar */
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px); /* Agregamos una pequeña animación al pasar el mouse*/
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Aumentamos la sombra al pasar el mouse */
+  }
+  
+  .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+  }

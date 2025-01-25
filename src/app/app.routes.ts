@@ -1,11 +1,14 @@
 import { Routes } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { HomeComponent } from './home/home.component';
+import { RecipesComponent } from './recipes/recipes.component';
 import { LoginComponent } from './login/login.component';
-import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/welcome', pathMatch: 'full' },
     { path: 'welcome', component: WelcomeComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'recipes', component: RecipeListComponent }
+    { path: 'home', component: HomeComponent },
+    { path: 'recipes', component: RecipesComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/home' },
 ];
